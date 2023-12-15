@@ -1,19 +1,59 @@
 {
-  "posts": [
+  "web-1": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Website-Toptul",
+      "dateCreated": "Apr 28, 2022"
     }
   ],
-  "comments": [
+  "web-2": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "body": "Website-Pizzon",
+      "dateCreated": "Jun 30, 2022"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "web-3": [
+    {
+      "id": 3,
+      "body": "Website-Githubfinder",
+      "dateCreated": "Jun 30, 2022"
+    }
+  ],
+  "web-4": [
+    {
+      "id": 4,
+      "body": "Website-Cake Bakery",
+      "dateCreated": "Dec 11, 2022"
+    }
+  ],
+  "web-5": [
+    {
+      "id": 5,
+      "body": "Website-Debebe",
+      "dateCreated": "Dec 30, 2022"
+    }
+  ],
+  "web-6": [
+    {
+      "id": 6,
+      "body": "Website-Assignment1",
+      "dateCreated": "Oct 15, 2023"
+    }
+  ],
+  "web-7": [
+    {
+      "id": 7,
+      "body": "Website-Assignment2",
+      "dateCreated": "Dec 5, 2023"
+    }
+  ],
+  "web-8": [
+    {
+      "id": 8,
+      "body": "Website-Assignment3",
+      "dateCreated": "Jan 4, 2024"
+    }
+  ]
+  
 }
