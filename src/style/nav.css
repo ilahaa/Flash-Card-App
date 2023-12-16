@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fuggles&family=Inter:wght@100&family=Lato:ital,wght@0,300;1,300&family=Lobster&family=Martian+Mono:wght@300;400&family=Mooli&family=Onest:wght@100&family=Poppins:wght@200&family=Roboto:wght@400;500;700&family=Rubik&family=Young+Serif&display=swap');
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 18vh;
+    color: #fff;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Additional styling if needed */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+/* .my-navbar {
+    height: 18vh;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between; 
+}
+.right-nav {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.left-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left-nav p{
+    font-family: 'Dancing Script', cursive;
+} */
