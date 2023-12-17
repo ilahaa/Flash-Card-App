@@ -4,7 +4,7 @@ const Nav = () => {
     return (
         <div className='my-navbar'>
             <nav className="navbar-container navbar navbar-expand-lg navbar-dark">
-                <div className="left-nav">
+                <div className="left-nav ml-5">
                     <div className="logo">
                         <i class="fa-solid fa-h"></i>
                         <i class="fa-solid fa-i ml-1"></i>
@@ -12,7 +12,7 @@ const Nav = () => {
                     <p>Hasanli Ilaha</p>
                 </div>
                 
-                <div className="right-nav">
+                <div className="right-nav mr-5">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             FlashCard
