@@ -1,5 +1,5 @@
-.project-container{
-    width: 250px;
+.project-container {
+    width: 350px;
     height: 300px;
     border: 1px solid #111;
     display: flex;
@@ -7,3 +7,8 @@
     align-items: center;
     justify-content: center;
 }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 100px; 
+  }

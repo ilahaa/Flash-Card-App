@@ -3,10 +3,12 @@ import "../style/project.css"
 const project = (props) => {
   return (
     <div className='project-container'>
-        <h4>{props.projectName}</h4>
-        <p>{props.projectDesc}</p>
-        <span>{props.projectDate}</span>
-    </div>
+      <h4>{props.projectName}</h4>
+      <span>{props.projectDate}</span>
+      <a href={props.projectLink} target="_blank">
+        View Project
+      </a>
+  </div>
   )
 }
 
