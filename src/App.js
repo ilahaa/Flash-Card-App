@@ -1,16 +1,10 @@
-import Home from "./Home";
-import FlashCard from "./FlashCard";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import React from "react";
+import AppRouters from "./AppRouters";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Nav />
-        <Home />
-        <FlashCard />
-        <Footer />
-      </header>
+      <AppRouters />
     </div>
   );
 }

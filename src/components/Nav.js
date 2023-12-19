@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style/nav.css";
+import { Outlet, Link } from "react-router-dom";
 const Nav = () => {
     return (
         <div className='my-navbar'>
@@ -11,19 +12,23 @@ const Nav = () => {
                     </div>
                     <p>Hasanli Ilaha</p>
                 </div>
-                
+
                 <div className="right-nav mr-5">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            FlashCard
-                        </li>
-                        <li className="nav-item ml-5">
-                            Home
-                        </li>
+                        <Link to="/flashcard">
+                            <li className="nav-item">
+                                FlashCard
+                            </li>
+                        </Link>
+                        <Link to="/home">
+                            <li className="nav-item ml-5">
+                                Home
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </nav>
-
+            <Outlet />
         </div>
     )
 }
