@@ -16,6 +16,7 @@ const AppRouters = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/flashcard" element={<FlashCard />} />
           </Routes>
+          <FlashCard />
           <Footer />
         </header>
       </div>
