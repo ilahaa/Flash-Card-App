@@ -1,15 +1,27 @@
+body{
+    background-color: #1e1e20;
+    color: white;
+}
 .homePage{
     height: auto;
     margin-top: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 .projects{
-    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 } 
+
+.home-texts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.scrollable-box {
+    width: 400px;
+    height: 400px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+    padding: 10px; 
+  }
