@@ -1,8 +1,21 @@
 import React from 'react'
+import bookData from "./data/mydata.json"
 
 const FlashCard = () => {
   return (
-    <div>FlashCard</div>
+    <div>
+      {bookData.cards.map((book) => (
+        <div key={book.id}>
+          <h2>{book.name}</h2>
+          <p>Author: {book.author}</p>
+          <img src={book.img} alt={book.name} />
+          <p>Pages: {book.pages}</p>
+          <p>Date Published: {book.datePublished}</p>
+          <p>Genres: {book.genres}</p>
+          <p>Description: {book.desc}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 
