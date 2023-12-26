@@ -15,7 +15,7 @@ const Home = () => {
         </div>
 
         <div className="col-lg-4 projects">
-        <div className='scrollable-box'>
+          <div className='scrollable-box'>
             <Project
               projectName="Web&Mobile-Assignment 3"
               projectDesc="This project is built for the second assignment of Web&Mobile course."
@@ -66,10 +66,10 @@ const Home = () => {
               projectDate="28.04.22"
               projectLink="ilahaa.github.io/toptul/"
             />
-</div>
           </div>
         </div>
       </div>
+    </div>
 
   )
 }

@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Home from "./Home";
 import FlashCard from "./FlashCard";
 import Footer from "./components/Footer";
+import ContactMe from "./ContactMe";
 
 const AppRouters = () => {
   return (
@@ -15,8 +16,10 @@ const AppRouters = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/flashcard" element={<FlashCard />} />
+            <Route path="/contactme" element={<ContactMe />} />
           </Routes>
           <FlashCard />
+          <ContactMe />
           <Footer />
         </header>
       </div>
