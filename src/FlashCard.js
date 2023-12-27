@@ -1,5 +1,5 @@
 import React from 'react'
-import bookData from "./data/mydata.json"
+import bookData from "./data/cards.json"
 
 const FlashCard = () => {
   return (
