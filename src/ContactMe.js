@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import "../src/style/contactMe.css";
+import '../src/style/contactMe.css';
+
 const ContactMe = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
     });
+    const [messageSent, setMessageSent] = useState(false);
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -17,15 +19,22 @@ const ContactMe = () => {
         fetch('http://localhost:3000/messages', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData),
         })
             .then((response) => {
                 if (response.ok) {
-                    console.log('Message sent successfully!');
+                    setMessageSent(true); 
+                    setFormData({ 
+                        name: '',
+                        email: '',
+                        message: '',
+                    });
+                    setTimeout(() => {
+                        setMessageSent(false); // Hide the message after 3 seconds
+                    }, 3000);
                 } else {
-                    // Log more specific error information
                     console.error('Error sending message:', response.status, response.statusText);
                 }
             })
@@ -84,6 +93,7 @@ const ContactMe = () => {
                             </div>
                             {/* Submit btn */}
                             <div className="text-center">
+                            {messageSent && <p className="success-message">Message sent successfully!</p>}
                                 <button type="submit" className="btn btn-primary" tabIndex={-1}>
                                     Send message
                                 </button>
