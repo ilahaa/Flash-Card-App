@@ -6,15 +6,16 @@ const Home = () => {
     <div className='homePage'>
       <div className="row container m-5">
 
-        <div className="col-lg-6 home-texts">
+        <div className="col-lg-7 home-texts">
           <h1>Welcome.</h1>
-          <p>Hello! I'm Ilaha Hasanli, a fourth-year student majoring in Computer Science at ADA University.
+          <p><strong>Hello!</strong> <br />
+             I'm Ilaha Hasanli, a fourth-year student majoring in Computer Science at ADA University.
             I'm passionate about front-end development and love creating web experiences.
             On this website, you'll discover a collection of projects that I've crafted.
             Additionally, I've curated my top reads in a fun flashcard format.</p>
         </div>
 
-        <div className="col-lg-4 projects">
+        <div className="col-lg-5 projects">
           <div className='scrollable-box'>
             <Project
               projectName="Web&Mobile-Assignment 3"

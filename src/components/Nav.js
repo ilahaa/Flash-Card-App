@@ -13,20 +13,20 @@ const Nav = () => {
                     <p>Hasanli Ilaha</p>
                 </div>
 
-                {/* <div className="right-nav mr-5">
+                <div className="right-nav mr-5">
                     <ul className="navbar-nav">
                         <Link to="/flashcard">
                             <li className="nav-item">
-                                FlashCard
+                                Favorite Books
                             </li>
                         </Link>
-                        <Link to="/home">
+                        <Link to="/contactme">
                             <li className="nav-item ml-5">
-                                Home
+                                Contact Me
                             </li>
                         </Link>
                     </ul>
-                </div> */}
+                </div>
             </nav>
             <Outlet />
         </div>

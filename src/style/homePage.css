@@ -1,10 +1,9 @@
 body{
-    background-color: #1e1e20;
-    color: white;
+    background-color: #b4b4bd;
+    color: black;
 }
 .homePage{
     height: auto;
-    margin-top: 20vh;
 }
 .projects{
     display: flex;
@@ -18,10 +17,17 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+h1{
+    font-family: "Henny Penny", cursive;
+    font-weight: bold;
+    text-shadow: 0 1px orange, -1px 0 orange, -1px 2px orange, -2px 1px orange,
+    -4px 5px orange, -5px 4px orange, -5px 6px orange, -6px 5px orange;
+}
 .scrollable-box {
     width: 400px;
-    height: 400px; 
+    height: 380px; 
     overflow-y: auto; 
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
