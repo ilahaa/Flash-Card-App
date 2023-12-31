@@ -20,12 +20,21 @@ const FlashCard = () => {
             onClick={() => handleCardClick(book.id)}
           >
             <div className="card front">
+              <div className="flip-icon-container">
+                <i className="flip-icon fa-solid fa-repeat"></i>
+              </div>
               <img src={book.img} alt={book.name} />
             </div>
             <div className="card back">
-              <h3>{book.name}</h3>
-              <p>Author: {book.author}</p>
+              <div className="flip-icon-container">
+                <i className="flip-icon fa-solid fa-repeat"></i>
+              </div>
+              <h3 className='bookName'>{book.name}</h3>
+              <p><span>Author:</span> {book.author}</p>
               <p>{book.desc}</p>
+              <p><span>Genres:</span> {book.genres}</p>
+              <p><span>Page:</span> {book.pages}</p>
+              <p><span>Published:</span> {book.datePublished}</p>
             </div>
           </div>
         ))}
