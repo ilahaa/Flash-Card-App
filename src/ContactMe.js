@@ -54,7 +54,7 @@ const ContactMe = () => {
                     <div className="col-6">
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <input
+                                <input required
                                     type="text"
                                     id="name"
                                     name="name"
@@ -69,7 +69,7 @@ const ContactMe = () => {
                                 <label htmlFor="email" className="d-block">
                                     <i className="icon" data-feather="mail" />
                                 </label>
-                                <input
+                                <input required
                                     type="email"
                                     id="email"
                                     name="email"
@@ -81,7 +81,7 @@ const ContactMe = () => {
                             </div>
                             {/* Message */}
                             <div className="form-group message">
-                                <textarea
+                                <textarea required
                                     id="message"
                                     name="message"
                                     className="form-control form-control-lg"
