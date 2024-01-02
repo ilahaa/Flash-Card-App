@@ -32,7 +32,7 @@ const ContactMe = () => {
                         message: '',
                     });
                     setTimeout(() => {
-                        setMessageSent(false); // Hide the message after 3 seconds
+                        setMessageSent(false); 
                     }, 3000);
                 } else {
                     console.error('Error sending message:', response.status, response.statusText);
@@ -43,7 +43,7 @@ const ContactMe = () => {
             });
     };
     return (
-        <div className='contactMe'>
+        <div className='contactMe' id="contactme-section">
             <h1>Contact Me</h1>
 
             <div className="container d-flex justify-content-center align-items-center">
@@ -64,7 +64,6 @@ const ContactMe = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            {/* E-mail */}
                             <div className="form-group position-relative">
                                 <label htmlFor="email" className="d-block">
                                     <i className="icon" data-feather="mail" />
@@ -79,7 +78,6 @@ const ContactMe = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            {/* Message */}
                             <div className="form-group message">
                                 <textarea required
                                     id="message"
@@ -91,7 +89,6 @@ const ContactMe = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            {/* Submit btn */}
                             <div className="text-center">
                             {messageSent && <p className="success-message">Message sent successfully!</p>}
                                 <button type="submit" className="btn btn-primary" tabIndex={-1}>

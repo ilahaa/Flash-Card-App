@@ -1,7 +1,11 @@
 import React from 'react';
 import "../style/nav.css";
 import { Outlet, Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 const Nav = () => {
+    // const scrollToTop = () => {
+    //     scroll.scrollToTop();
+    // };
     return (
         <div className='my-navbar'>
             <nav className="navbar-container navbar navbar-expand-lg navbar-dark">
@@ -15,16 +19,39 @@ const Nav = () => {
 
                 <div className="right-nav mr-5">
                     <ul className="navbar-nav">
-                        <Link to="/flashcard">
-                            <li className="nav-item">
+                        <li className="nav-item">
+                            <ScrollLink
+                                to="home-section"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Home
+                            </ScrollLink>
+                        </li>
+                        <li className="nav-item ml-5">
+                            <ScrollLink
+                                to="flashcard-section"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
                                 Favorite Books
-                            </li>
-                        </Link>
-                        <Link to="/contactme">
-                            <li className="nav-item ml-5">
+                            </ScrollLink>
+                        </li>
+                        <li className="nav-item ml-5">
+                            <ScrollLink
+                                to="contactme-section"
+                                spy={true}
+                                smooth={true}
+                                offset={-70} // Adjust the offset as needed
+                                duration={500}
+                            >
                                 Contact Me
-                            </li>
-                        </Link>
+                            </ScrollLink>
+                        </li>
                     </ul>
                 </div>
             </nav>

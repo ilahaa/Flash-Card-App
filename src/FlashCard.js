@@ -39,7 +39,7 @@ const FlashCard = () => {
 
   
   return (
-    <div className="flashCardPage m-5">
+    <div className="flashCardPage m-5" id="flashcard-section">
       <h1>Favorite Books</h1>
       <div className="books-container">
         {book.map((book) => (

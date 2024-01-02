@@ -3,7 +3,7 @@ import "../src/style/homePage.css"
 import Project from './components/project'
 const Home = () => {
   return (
-    <div className='homePage'>
+    <div className='homePage' id='home-section'>
       <div className="row container m-5">
 
         <div className="col-lg-7 home-texts">
