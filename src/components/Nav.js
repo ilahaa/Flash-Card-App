@@ -21,33 +21,39 @@ const Nav = () => {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <ScrollLink
+                            className='nav-page'
                                 to="home-section"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 Home
                             </ScrollLink>
                         </li>
                         <li className="nav-item ml-5">
                             <ScrollLink
+                            className='nav-page'
                                 to="flashcard-section"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 Favorite Books
                             </ScrollLink>
                         </li>
                         <li className="nav-item ml-5">
                             <ScrollLink
+                            className='nav-page'
                                 to="contactme-section"
                                 spy={true}
                                 smooth={true}
-                                offset={-70} // Adjust the offset as needed
+                                offset={-70} 
                                 duration={500}
+                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 Contact Me
                             </ScrollLink>
