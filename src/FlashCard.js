@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import bookData from './data/mydata.json';
 import '../src/style/flashCard.css';
 import EditCard from './EditCard';
+import AddNewCard from './AddNewCard';
 
 const FlashCard = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [book, setBook] = useState(bookData.cards);
   const [editCardId, setEditCardId] = useState(null);
+
+  const handleAddNewBook = (newBook) => {
+    const updatedBooks = [...book, { ...newBook, id: (book.length + 1).toString() }];
+    setBook(updatedBooks);
+  };
 
   const handleEdit = (bookId) => {
     setEditCardId(bookId);
@@ -31,20 +37,7 @@ const FlashCard = () => {
     setBook(updatedBooks);
   };
 
-  const updateCardStatus = (bookId, status) => {
-    const updatedBookData = book.map((book) => {
-      if (book.id === bookId) {
-        return {
-          ...book,
-          status: status,
-          lastModified: new Date().toLocaleString(),
-        };
-      }
-      return book;
-    });
-    console.log('Updated Book Data:', updatedBookData);
-  };
-
+  
   return (
     <div className="flashCardPage m-5">
       <h1>Favorite Books</h1>
@@ -72,7 +65,7 @@ const FlashCard = () => {
                 <p><span>Page:</span> {book.pages}</p>
                 <p><span>Published:</span> {book.datePublished}</p>
               </div>
-              </div>
+            </div>
             <div className="delete-edit-buttons">
               <i className="delete-button fa-solid fa-trash" onClick={() => handleDelete(book.id)}></i>
               <i className="edit-button fa-regular fa-pen-to-square ml-3" onClick={() => handleEdit(book.id)}></i>
@@ -81,13 +74,16 @@ const FlashCard = () => {
         ))}
       </div>
       {editCardId !== null && (
-      <EditCard
-        book={book.find((bookItem) => bookItem.id === editCardId)}
-        onClose={handleCloseEdit}
-        onEdit={handleEditBook} 
-      />
-    )}
+        <EditCard
+          book={book.find((bookItem) => bookItem.id === editCardId)}
+          onClose={handleCloseEdit}
+          onEdit={handleEditBook}
+        />
+      )}
 
+      <div className="addNewCard">
+      <AddNewCard onAdd={handleAddNewBook} />
+      </div>
     </div>
   );
 };
