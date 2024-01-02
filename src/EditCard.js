@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "../src/style/editCard.css";
 const EditCard = ({ book, onClose, onEdit }) => {
   const [updatedBookDetails, setUpdatedBookDetails] = useState(book);
 
@@ -17,8 +17,10 @@ const EditCard = ({ book, onClose, onEdit }) => {
 
   return (
     <div className="edit-modal-overlay">
-
+      
       <div className="edit-modal-content">
+
+        <i className="closeBtn fa-solid fa-xmark" onClick={onClose}></i>
 
         <h2>Edit Book Details</h2>
 
@@ -31,7 +33,6 @@ const EditCard = ({ book, onClose, onEdit }) => {
           <input type="text" name="name" value={updatedBookDetails.datePublished} onChange={handleInputChange} />
         </div>
 
-        <i className="closeBtn fa-solid fa-xmark" onClick={onClose}></i>
         <button className='saveButton' onClick={handleEditClick}>Save</button>
 
       </div>
