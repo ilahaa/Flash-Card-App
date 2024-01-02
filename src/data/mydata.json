@@ -9,7 +9,8 @@
       "desc": "Martin Eden is a 1909 novel by American author Jack London about a young proletarian autodidact struggling to become a writer. It was first serialized in The Pacific Monthly magazine from September 1908 to September 1909 and then published in book form by Macmillan in September 1909.",
       "datePublished": "September 1909",
       "genres": "Novel, Fiction, Künstlerroman",
-      "status":"Already read"
+      "status": "Already read",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "2",
@@ -20,7 +21,8 @@
       "desc": "Pride and Prejudice is the second novel by English author Jane Austen, published in 1813. A novel of manners, it follows the character development of Elizabeth Bennet, the protagonist of the book, who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness.",
       "datePublished": "January 28, 1813",
       "genres": "Romance novel, Satire, Regency romance, Literary fiction, Novel of manners",
-      "status":"Noted"
+      "status": "Noted",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "3",
@@ -31,7 +33,8 @@
       "desc": "Crime and Punishment is a novel by the Russian author Fyodor Dostoevsky. It was first published in the literary journal The Russian Messenger in twelve monthly installments during 1866. It was later published in a single volume.",
       "datePublished": "December 1866",
       "genres": "Novel, Psychological Fiction, Mystery, Crime Fiction, Philosophical fiction",
-      "status":"Already read"
+      "status": "Already read",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "4",
@@ -42,7 +45,8 @@
       "desc": "'Phobia' by Wulf Dorn is a gripping psychological thriller that follows the story of a psychiatrist, Jan Forstner, who becomes entangled in a mystery surrounding a patient's disappearance. As he delves deeper into the case, he discovers unsettling connections to his own past, forcing him to confront his fears and secrets.",
       "datePublished": "September 9, 2013",
       "genres": "Suspense",
-      "status": "Already read"
+      "status": "Already read",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "5",
@@ -53,7 +57,8 @@
       "desc": " The Strange Journey of Mr. Daldry by Marc Levy is a charming and whimsical tale that follows Alice, a young Parisian woman, as she embarks on an unexpected adventure after receiving a mysterious letter from a stranger named Mr. Daldry. This letter sets her on a journey across continents, encountering colorful characters and unexpected twists along the way.",
       "datePublished": "April 21, 2011",
       "genres": "Fiction",
-      "status":"Want to Read"
+      "status": "Want to Read",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "6",
@@ -64,7 +69,8 @@
       "desc": "The story is set in the 1950s and '60s in a quiet town on the North Carolina coast. It revolves around Kya Clark, known as the Marsh Girl, who grows up isolated in the marshes after being abandoned by her family. As Kya navigates her way through life in the wild, she becomes embroiled in a mystery surrounding the death of a local man.",
       "datePublished": "August 14, 2018",
       "genres": "literary fiction, mystery",
-      "status":"Already read"
+      "status": "Already read",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "7",
@@ -75,7 +81,8 @@
       "desc": "The story revolves around Logan Thibault, a U.S. Marine who discovers a photograph of a woman while on duty in Iraq. Believing it to be his lucky charm that kept him safe, he sets out on a quest to find the woman in the picture. His search leads him to a small town where he meets Elizabeth, a divorced mother who runs a dog kennel.",
       "datePublished": "September 2008",
       "genres": "Romance, Drama, Fiction",
-      "status":"Noted"
+      "status": "Noted",
+      "cardModifiedDate": "1.2.2024"
     },
     {
       "id": "8",
@@ -86,9 +93,9 @@
       "desc": "The story is set in a totalitarian society ruled by a figure known as Big Brother, where individuality is suppressed, and the government monitors and controls every aspect of people's lives. The protagonist, Winston Smith, rebels against the oppressive regime, seeking freedom of thought and expression.",
       "datePublished": "June 8, 1949",
       "genres": "fiction, political fiction, speculative fiction, social criticism.",
-      "status":"Want to Read"
+      "status": "Want to Read",
+      "cardModifiedDate": "1.2.2024"
     }
   ],
-  "messages": [
-  ]
+  "messages": []
 }

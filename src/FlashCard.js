@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
 import bookData from './data/mydata.json';
 import '../src/style/flashCard.css';
+import EditCard from './EditCard';
 
 const FlashCard = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [book, setBook] = useState(bookData.cards);
+  const [editCardId, setEditCardId] = useState(null);
+
+  const handleEdit = (bookId) => {
+    setEditCardId(bookId);
+  };
+
+  const handleCloseEdit = () => {
+    setEditCardId(null);
+  };
+
+  const handleEditBook = (updatedBook) => {
+    const updatedBooks = book.map((b) => (b.id === updatedBook.id ? updatedBook : b));
+    setBook(updatedBooks);
+    setEditCardId(null);
+  };
 
   const handleCardClick = (bookId) => {
-    setSelectedBook(bookId === selectedBook ? null : bookId);
+    setSelectedBook((selected) => (selected === bookId ? null : bookId));
   };
 
   const handleDelete = (bookId) => {
@@ -21,7 +37,7 @@ const FlashCard = () => {
         return {
           ...book,
           status: status,
-          lastModified: new Date().toLocaleString()
+          lastModified: new Date().toLocaleString(),
         };
       }
       return book;
@@ -34,7 +50,7 @@ const FlashCard = () => {
       <h1>Favorite Books</h1>
       <div className="books-container">
         {book.map((book) => (
-          <div className='main-flashcard-container' key={book.id}>
+          <div className="main-flashcard-container" key={book.id}>
             <div
               className={`cardItem ${selectedBook === book.id ? 'is-flipped' : ''}`}
               onClick={() => handleCardClick(book.id)}
@@ -56,13 +72,22 @@ const FlashCard = () => {
                 <p><span>Page:</span> {book.pages}</p>
                 <p><span>Published:</span> {book.datePublished}</p>
               </div>
+              </div>
+            <div className="delete-edit-buttons">
+              <i className="delete-button fa-solid fa-trash" onClick={() => handleDelete(book.id)}></i>
+              <i className="edit-button fa-regular fa-pen-to-square ml-3" onClick={() => handleEdit(book.id)}></i>
             </div>
-            <button className="delete-button" onClick={() => handleDelete(book.id)}>
-                  Delete
-                </button>
           </div>
         ))}
       </div>
+      {editCardId !== null && (
+      <EditCard
+        book={book.find((bookItem) => bookItem.id === editCardId)}
+        onClose={handleCloseEdit}
+        onEdit={handleEditBook} 
+      />
+    )}
+
     </div>
   );
 };
