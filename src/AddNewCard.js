@@ -31,7 +31,7 @@ const AddNewCard = ({ onAdd }) => {
       desc: '',
       datePublished: '',
       genres: '',
-      status: 'Want to Read',
+      status: '',
     });
   };
 

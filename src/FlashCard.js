@@ -6,12 +6,13 @@ import AddNewCard from './AddNewCard';
 import Card from './components/Card';
 import Search from './components/Search';
 import Filter from './components/Filter';
+import Sort from './components/Sort';
 const FlashCard = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [book, setBook] = useState(bookData.cards);
   const [editCardId, setEditCardId] = useState(null);
   const [filteredBooks, setFilteredBooks] = useState(bookData.cards);
-
+  const [sortedBooks, setSortedBooks] = useState(bookData.cards);
 
   const fetchBooks = async () => {
     try {
@@ -100,27 +101,46 @@ const FlashCard = () => {
     }
   };
 
+  const updateFilteredAndSortedBooks = (books) => {
+    setFilteredBooks(books);
+    setSortedBooks(books);
+  };
+
   return (
     <div className="flashCardPage m-5" id="flashcard-section">
       <h1>Favorite Books</h1>
 
-      <div className="search-filter">
-        <Search books={bookData.cards} setFilteredBooks={setFilteredBooks} />
-        <Filter books={bookData.cards} setFilteredBooks={setFilteredBooks} />
+      <div className="row mt-5 flashCardMain">
+        <div className="col-4 filter-box">
+          <div className="search-filter">
+            <p className='filter-desc'>You can search for a book by entering any keyword related to the book.
+             Additionally, you can sort the books by their publish dates.
+             The books can also be filtered by their status (read, noted, want to read) and genres.
+            </p>
+            <Search books={bookData.cards} setFilteredBooks={updateFilteredAndSortedBooks} />
+            <div><Sort books={filteredBooks} setSortedBooks={setSortedBooks} /></div>
+            <div className="mt-4"><Filter books={bookData.cards} setFilteredBooks={updateFilteredAndSortedBooks} /></div>
+          </div>
+        </div>
+        <div className="col-8">
+          <div className="books-container">
+            {sortedBooks.map((book) => (
+              <Card
+                key={book.id}
+                book={book}
+                selectedBook={selectedBook}
+                handleCardClick={handleCardClick}
+                handleDelete={handleDelete}
+                handleEdit={handleEdit}
+              />
+            ))}
+          </div>
+
+        </div>
       </div>
-      
-      <div className="books-container">
-        {filteredBooks.map((book) => (
-          <Card
-            key={book.id}
-            book={book}
-            selectedBook={selectedBook}
-            handleCardClick={handleCardClick}
-            handleDelete={handleDelete}
-            handleEdit={handleEdit}
-          />
-        ))}
-      </div>
+
+
+
       {editCardId !== null && (
         <EditCard
           book={book.find((bookItem) => bookItem.id === editCardId)}

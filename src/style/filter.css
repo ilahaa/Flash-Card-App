@@ -1,0 +1,12 @@
+.applyBtn{
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    color: rgb(48, 47, 47);
+    transition: .3s;
+}
+.applyBtn:hover{
+    transition: .3s;
+    background-color: orange;
+    color: black;
+}

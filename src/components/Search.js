@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "../style/search.css"
 const Search = ({ books, setFilteredBooks }) => {
   const [searchBook, setSearchBook] = useState('');
 
@@ -21,7 +21,7 @@ const Search = ({ books, setFilteredBooks }) => {
   };
 
   return (
-    <div>
+    <div className='searchOption'>
       <input
         type="text"
         placeholder="Search for a book..."

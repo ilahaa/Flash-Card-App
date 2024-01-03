@@ -1,0 +1,42 @@
+.sortOption {
+    background-color: #fff;
+    width: 60%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .sort-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .sortOption:hover .sort-content {
+    display: block;
+  }
+  .sort-content button {
+    background-color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .sort-content button:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropbtn{
+    border: none;
+    background-color: #fff;
+    color: grey;
+  }
+  
