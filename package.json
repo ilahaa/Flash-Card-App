@@ -2,6 +2,7 @@
   "name": "assignment3",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ilahaa.github.io/Flash-Card-App",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,8 +13,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://ilahaa.github.io/Flash-Card-App"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",
