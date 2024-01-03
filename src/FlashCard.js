@@ -4,12 +4,14 @@ import '../src/style/flashCard.css';
 import EditCard from './EditCard';
 import AddNewCard from './AddNewCard';
 import Card from './components/Card';
+import Search from './components/Search';
 const FlashCard = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [book, setBook] = useState(bookData.cards);
   const [editCardId, setEditCardId] = useState(null);
+  const [filteredBooks, setFilteredBooks] = useState(bookData.cards);
 
-  
+
   const fetchBooks = async () => {
     try {
       const response = await fetch('http://localhost:3000/cards');
@@ -23,11 +25,11 @@ const FlashCard = () => {
       console.error('Error:', error);
     }
   };
-  
+
   useEffect(() => {
     fetchBooks();
   }, []);
-  
+
 
   const handleAddNewBook = async (newBook) => {
     try {
@@ -38,9 +40,9 @@ const FlashCard = () => {
         },
         body: JSON.stringify(newBook),
       });
-  
+
       if (response.ok) {
-        fetchBooks(); 
+        fetchBooks();
       } else {
         throw new Error('Failed');
       }
@@ -48,7 +50,7 @@ const FlashCard = () => {
       console.error('Error:', error);
     }
   };
-  
+
 
   const handleEdit = (bookId) => {
     setEditCardId(bookId);
@@ -58,24 +60,24 @@ const FlashCard = () => {
     setEditCardId(null);
   };
 
-const handleEditBook = async (updatedBook) => {
-  try {
-    const response = await fetch(`http://localhost:3000/cards/${updatedBook.id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updatedBook),
-    });
+  const handleEditBook = async (updatedBook) => {
+    try {
+      const response = await fetch(`http://localhost:3000/cards/${updatedBook.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedBook),
+      });
 
-    if (response.ok) {
-    } else {
-      throw new Error('Failed');
+      if (response.ok) {
+      } else {
+        throw new Error('Failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
-  } catch (error) {
-    console.error('Error:', error);
-  }
-};
+  };
 
 
   const handleCardClick = (bookId) => {
@@ -87,7 +89,7 @@ const handleEditBook = async (updatedBook) => {
       const response = await fetch(`http://localhost:3000/cards/${bookId}`, {
         method: 'DELETE',
       });
-  
+
       if (response.ok) {
       } else {
         throw new Error('Failed');
@@ -96,21 +98,23 @@ const handleEditBook = async (updatedBook) => {
       console.error('Error:', error);
     }
   };
-  
+
   return (
     <div className="flashCardPage m-5" id="flashcard-section">
       <h1>Favorite Books</h1>
 
+      <Search books={bookData.cards} setFilteredBooks={setFilteredBooks} />
+
       <div className="books-container">
-        {book.map((book) => (
-                   <Card
-                   key={book.id}
-                   book={book}
-                   selectedBook={selectedBook}
-                   handleCardClick={handleCardClick}
-                   handleDelete={handleDelete}
-                   handleEdit={handleEdit}
-                 />
+        {filteredBooks.map((book) => (
+          <Card
+            key={book.id}
+            book={book}
+            selectedBook={selectedBook}
+            handleCardClick={handleCardClick}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+          />
         ))}
       </div>
       {editCardId !== null && (
@@ -122,7 +126,7 @@ const handleEditBook = async (updatedBook) => {
       )}
 
       <div className="addNewCard">
-      <AddNewCard onAdd={handleAddNewBook} />
+        <AddNewCard onAdd={handleAddNewBook} />
       </div>
     </div>
   );
