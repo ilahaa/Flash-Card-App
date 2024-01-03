@@ -123,17 +123,21 @@ const FlashCard = () => {
           </div>
         </div>
         <div className="col-8">
-          <div className="books-container">
-            {sortedBooks.map((book) => (
-              <Card
-                key={book.id}
-                book={book}
-                selectedBook={selectedBook}
-                handleCardClick={handleCardClick}
-                handleDelete={handleDelete}
-                handleEdit={handleEdit}
-              />
-            ))}
+        <div className="books-container">
+            {sortedBooks.length === 0 ? (
+              <p className='text-center'>No books found for the specified filters.</p>
+            ) : (
+              sortedBooks.map((book) => (
+                <Card
+                  key={book.id}
+                  book={book}
+                  selectedBook={selectedBook}
+                  handleCardClick={handleCardClick}
+                  handleDelete={handleDelete}
+                  handleEdit={handleEdit}
+                />
+              ))
+            )}
           </div>
 
         </div>
@@ -149,7 +153,7 @@ const FlashCard = () => {
         />
       )}
 
-      <div className="addNewCard">
+      <div className="addNewCard mt-4">
         <AddNewCard onAdd={handleAddNewBook} />
       </div>
     </div>

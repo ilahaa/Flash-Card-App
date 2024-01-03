@@ -44,16 +44,15 @@ const Filter = ({ books, setFilteredBooks }) => {
   return (
     <div>
       <div>
-        <label htmlFor="statusFilter">Filter by Status:</label>
         <select id="statusFilter" value={filteredStatus} onChange={handleChangeStatus}>
           <option value="All">All</option>
           <option value="Already read">Already read</option>
           <option value="Noted">Noted</option>
           <option value="Want to Read">Want to read</option>
         </select>
+        <label htmlFor="statusFilter">: Filter by Status</label>
       </div>
       <div>
-        <label htmlFor="genreFilter">Filter by Genre:</label>
         <select id="genreFilter" value={filteredGenre} onChange={handleChangeGenre}>
           <option value="All">All</option>
           {allGenres.map((genre) => (
@@ -62,6 +61,7 @@ const Filter = ({ books, setFilteredBooks }) => {
             </option>
           ))}
         </select>
+        <label htmlFor="genreFilter">: Filter by Genre</label>
       </div>
       <button className='applyBtn' onClick={applyFilters}>Apply Filters</button>
     </div>

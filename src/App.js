@@ -1,11 +1,18 @@
 import React from "react";
-import AppRouters from "./AppRouters";
-
+import Nav from "../src/components/Nav.js";
+import Home from "./Home.js";
+import FlashCard from "./FlashCard.js";
+import ContactMe from "./ContactMe.js"
 function App() {
   return (
     <div className="App">
-      <AppRouters />
-    </div>
+    <header className="App-header">
+      <Nav />
+      <Home />
+      <FlashCard />
+      <ContactMe />
+    </header>
+  </div>
   );
 }
 
