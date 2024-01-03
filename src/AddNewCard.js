@@ -45,6 +45,7 @@ const AddNewCard = ({ onAdd }) => {
           <input placeholder='Genres' type="text" name="genres" value={newBook.genres} onChange={handleChange} />
           <input placeholder='Pages' type="text" name="pages" value={newBook.pages} onChange={handleChange} />
           <input placeholder='Url of the image' type="text" name="img" value={newBook.img} onChange={handleChange} />
+          <input placeholder='Status' type="text" name="status" value={newBook.status} onChange={handleChange} />
           <input placeholder='Published Date' type="text" name="datePublished" value={newBook.datePublished} onChange={handleChange} />
         <button type="button" onClick={handleAdd}>
           Add 

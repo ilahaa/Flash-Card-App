@@ -5,6 +5,7 @@ import EditCard from './EditCard';
 import AddNewCard from './AddNewCard';
 import Card from './components/Card';
 import Search from './components/Search';
+import Filter from './components/Filter';
 const FlashCard = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [book, setBook] = useState(bookData.cards);
@@ -103,8 +104,11 @@ const FlashCard = () => {
     <div className="flashCardPage m-5" id="flashcard-section">
       <h1>Favorite Books</h1>
 
-      <Search books={bookData.cards} setFilteredBooks={setFilteredBooks} />
-
+      <div className="search-filter">
+        <Search books={bookData.cards} setFilteredBooks={setFilteredBooks} />
+        <Filter books={bookData.cards} setFilteredBooks={setFilteredBooks} />
+      </div>
+      
       <div className="books-container">
         {filteredBooks.map((book) => (
           <Card

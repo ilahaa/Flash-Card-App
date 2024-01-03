@@ -23,6 +23,7 @@ const Card = ({ book, selectedBook, handleCardClick, handleDelete, handleEdit })
                     <p><span>Genres:</span> {book.genres}</p>
                     <p><span>Page:</span> {book.pages}</p>
                     <p><span>Published:</span> {book.datePublished}</p>
+                    <p><span>Status:</span> {book.status}</p>
                 </div>
             </div>
             <div className="delete-edit-buttons">

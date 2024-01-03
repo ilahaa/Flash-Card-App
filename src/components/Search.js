@@ -21,7 +21,7 @@ const Search = ({ books, setFilteredBooks }) => {
   };
 
   return (
-    <div className='m-5'>
+    <div>
       <input
         type="text"
         placeholder="Search for a book..."

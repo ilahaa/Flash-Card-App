@@ -12,7 +12,7 @@
 
 .cardItem {
   width: 270px;
-  height: 350px;
+  height: 370px;
   position: relative;
   margin: 0 90px 90px;
   cursor: pointer;
@@ -67,6 +67,7 @@
 }
 
 .back h3 {
+  font-size: 20px;
   text-align: center;
 }
 
@@ -131,4 +132,12 @@
 .main-flashcard-container:hover .delete-edit-buttons {
   opacity: 1;
   transition: opacity 0.3s ease;
+}
+
+.search-filter{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
