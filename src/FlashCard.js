@@ -73,6 +73,10 @@ const FlashCard = () => {
       });
 
       if (response.ok) {
+        setBook((prevBooks) =>
+        prevBooks.map((book) => (book.id === updatedBook.id ? updatedBook : book))
+      );
+      handleCloseEdit(); 
       } else {
         throw new Error('Failed');
       }
@@ -93,6 +97,7 @@ const FlashCard = () => {
       });
 
       if (response.ok) {
+        setBook((prevBooks) => prevBooks.filter((book) => book.id !== bookId));
       } else {
         throw new Error('Failed');
       }
